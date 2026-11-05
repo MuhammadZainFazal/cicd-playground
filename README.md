@@ -1,0 +1,1 @@
+Learning CI/CD by building a small app and pipeline.
