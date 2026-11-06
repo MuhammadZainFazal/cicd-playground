@@ -39,7 +39,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: pip
       - run: pip install -r requirements-dev.txt
-      - run: pytest --cov=app --cov-report=xml
+      - run: pytest --cov=app --cov-report=term-missing --cov-report=xml --cov-fail-under=90
       - uses: actions/upload-artifact@v7
         if: matrix.python-version == '3.12'
         with:

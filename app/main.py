@@ -2,7 +2,6 @@
 import os
 
 from flask import Flask, jsonify, request
-import requests
 
 from app import __version__
 from app.calculator import add, divide, multiply, subtract
