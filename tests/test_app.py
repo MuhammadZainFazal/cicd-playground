@@ -34,4 +34,12 @@ def test_calc_bad_input(client):
 
 
 def test_calc_unknown_op(client):
-    assert client.get("/calc/power?a=1&b=2").status_code == 404
+    assert client.get("/calc/poweron?a=1&b=2").status_code == 404
+
+def test_calc_power(client):
+    res = client.get("/calc/power?a=2&b=10")
+    assert res.get_json()["result"] == 1024
+
+
+def test_calc_power_invalid(client):
+    assert client.get("/calc/power?a=-8&b=0.5").status_code == 400
