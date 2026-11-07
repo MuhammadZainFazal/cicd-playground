@@ -44,3 +44,4 @@ def test_power_complex_result():
 def test_power_overflow():
     with pytest.raises(ValueError):
         power(10.0, 100000)
+    assert False
