@@ -5,6 +5,8 @@ on:
   push:
     branches: [main]
   pull_request:
+  schedule:
+    - cron: "0 3 * * *"    # every day at 03:00 UTC
 
 # Cancel older runs of the same branch when a new commit arrives
 concurrency:
