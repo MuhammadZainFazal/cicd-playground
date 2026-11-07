@@ -4,13 +4,14 @@ import os
 from flask import Flask, jsonify, request
 
 from app import __version__
-from app.calculator import add, divide, multiply, subtract
+from app.calculator import add, divide, multiply, power, subtract
 
 OPERATIONS = {
     "add": add,
     "subtract": subtract,
     "multiply": multiply,
     "divide": divide,
+    "power": power,
 }
 
 
